@@ -4,6 +4,8 @@
 
 Decomposes the deformation field of a structural fairing surface mesh using **Singular Value Decomposition (SVD)**. Each SVD mode captures a dominant spatial pattern of deformation, enabling low-rank approximation and visualisation of the shape change.
 
+![SVD shape decomposition example](Example/fig/0_shape_decomposition.png)
+
 ---
 
 ## Method

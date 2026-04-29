@@ -7,6 +7,8 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.linalg import svd
+import matplotlib
+matplotlib.use("Agg")  # non-interactive, save-only
 
 
 # ---------------------------------------------------------------------------
@@ -158,5 +160,14 @@ if __name__ == "__main__":
         plot_mode(axes[idx], X, ndXk_contribution, X1, surface_nodes_coords, r, e, ek)
 
     plt.tight_layout()
-    plt.show()
+
+    fig_dir = os.path.join(CASE_DIR, "fig")
+    os.makedirs(fig_dir, exist_ok=True)
+    fig_path = os.path.join(fig_dir, f"{FILE_ID}_shape_decomposition.png")
+    fig.savefig(fig_path, dpi=150, bbox_inches="tight")
+    print(f"Figure saved to {fig_path}")
+
+    # plt.show()
+
+
 

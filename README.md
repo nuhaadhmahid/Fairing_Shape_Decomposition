@@ -8,15 +8,19 @@ Decomposes the deformation field of a structural fairing surface mesh using **Si
 
 ## Method
 
-Given a surface mesh with nodal coordinates $X$ and nodal displacements $\Delta X$, the deformation matrix is factorised as:
+Given a surface mesh with nodal coordinates **X** and nodal displacements **dX**, the deformation matrix is factorised as:
 
-$$\Delta X = U \, S \, V^T$$
+```
+dX = U @ S @ V_T
+```
 
-The rank-$k$ reconstruction is:
+The rank-k reconstruction is:
 
-$$\Delta X^{(k)} = U_{:,\,:k} \; S_{:k,\,:k} \; V_{:k,\,:}^T$$
+```
+dX_k = U[:, :k] @ S[:k, :k] @ V_T[:k, :]
+```
 
-The script plots the **individual contribution** of each mode $k = 1, 2, 3$ alongside the original deformed shape, and reports the mean nodal reconstruction error for each.
+The script plots the **individual contribution** of each mode k = 1, 2, 3 alongside the original deformed shape, and reports the mean nodal reconstruction error for each.
 
 ---
 
@@ -86,9 +90,9 @@ run_dir/                 # Working directory for runs
 
 A matplotlib figure with three 3D scatter subplots, one per SVD mode:
 
-- **Red** — rank-$k$ SVD mode contribution
+- **Red** — rank-k SVD mode contribution
 - **Grey** — original deformed shape
-- Title shows mode index $k$, cumulative error $e$, and mode-only error $e_k$
+- Title shows mode index k, cumulative error e, and mode-only error ek
 
 ---
 

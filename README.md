@@ -1,5 +1,7 @@
 # Fairing Shape Decomposition
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Decomposes the deformation field of a structural fairing surface mesh using **Singular Value Decomposition (SVD)**. Each SVD mode captures a dominant spatial pattern of deformation, enabling low-rank approximation and visualisation of the shape change.
 
 ---
@@ -87,3 +89,9 @@ A matplotlib figure with three 3D scatter subplots, one per SVD mode:
 - **Red** — rank-$k$ SVD mode contribution
 - **Grey** — original deformed shape
 - Title shows mode index $k$, cumulative error $e$, and mode-only error $e_k$
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -36,8 +36,6 @@ The script plots the **individual contribution** of each mode k = 1, 2, 3 alongs
 Install dependencies into a virtual environment:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 

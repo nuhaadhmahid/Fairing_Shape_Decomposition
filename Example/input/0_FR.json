@@ -1,0 +1,23 @@
+{
+    "aerofoil_name": "sc(2)-0414",
+    "fairing_span": 0.8,
+    "fairing_chord": 1.6,
+    "hinge_chord_eta": 0.5,
+    "num_floating_ribs": 0,
+    "pre_strain": 0.1,
+    "rotation_angle": 0.6981317007977318,
+    "model_type": "fairing",
+    "element_size": 0.02,
+    "model_fidelity": "equivalent",
+    "model_fidelity_settings": {
+        "equivalent": {
+            "bool_isotropic": false
+        }
+    },
+    "solver": "newton",
+    "solver_increment_settings": {
+        "max_incr_size": 0.01,
+        "min_incr_size": 1e-05,
+        "max_num_incr": 1000
+    }
+}
